@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 import logo from '../../assets/logo.png';
-import { FiMenu, FiHome, FiUser, FiClipboard, FiSettings, FiSearch, FiLogOut, FiUsers } from 'react-icons/fi';
+import { FiMenu, FiHome, FiUser, FiClipboard, FiSettings, FiSearch, FiLogOut, FiUsers , FiTruck} from 'react-icons/fi';
+
 
 const AdminNavbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -54,6 +55,12 @@ const AdminNavbar = () => {
             className={location.pathname === '/adminproducts' ? 'active' : ''}
           >
             <FiClipboard size={20} /><span>Products</span>
+          </Link>
+          <Link
+            to="/adminsupplier"
+            className={location.pathname === '/adminsupplier' ? 'active' : ''}
+          >
+            <FiTruck size={20} /><span>Supplier</span>
           </Link>
           <Link
             to="/adminusers"
